@@ -41,7 +41,7 @@ select c.name, count(*) as borrowed_books
 from customers c
 join book_status bs on c.id = bs.customer_id
 where bs.status_type = 'BORROWED'
-group by c.id, c.name
+group by c.name
 having count(*) > 1;
 
 
